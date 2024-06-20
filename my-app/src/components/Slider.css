@@ -1,0 +1,42 @@
+.custom-carousel {
+  width: 75%; /* Початкова ширина слайдера */
+  margin: 0 auto; /* Центрування слайдера */
+}
+.carousel-caption h5 {
+  color: #fff; /* Колір тексту */
+  font-size: 5rem; /* Розмір шрифту */
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.6); /* Тінь тексту */
+}
+
+.carousel-inner img {
+  height: 300px; /* Початкова висота зображень */
+  object-fit: cover; /* Вирівнювання зображень */
+  object-position: center; /* Розміщення зображення в центрі */
+}
+
+/* Адаптивність для малих екранів */
+@media (max-width: 1024px) {
+  .custom-carousel {
+    width: 90%; /* Збільшуємо ширину на менших екранах */
+  }
+
+  .carousel-inner img {
+    height: 250px; /* Зменшуємо висоту зображень */
+  }
+}
+
+@media (max-width: 768px) {
+  .custom-carousel {
+    width: 100%; /* Максимальна ширина на малих екранах */
+  }
+
+  .carousel-inner img {
+    height: 200px; /* Ще більше зменшуємо висоту зображень */
+  }
+}
+
+@media (max-width: 576px) {
+  .carousel-inner img {
+    height: 150px; /* Максимально зменшуємо висоту зображень на дуже малих екранах */
+  }
+}

@@ -1,0 +1,50 @@
+.navbar {
+  background-color: #ffffff; /* Білий фон навігаційної панелі */
+  color: #e81111; /* Темний текст */
+}
+
+.navbar-brand, .nav-link {
+  color: #1e1e1e; /* Темний текст */
+}
+
+.nav-link:hover {
+  color: #bb86fc; /* Колір при наведенні */
+}
+
+/* Додатковий стиль для кнопки бургер-меню */
+.navbar-toggler {
+  border-color: rgba(111, 14, 14, 0.1);
+}
+
+@media (max-width: 768px) {
+  .navbar-nav {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  .nav-item {
+    width: 100%;
+    text-align: center;
+  }
+
+  .nav-link {
+    padding: 10px 0;
+    width: 100%;
+  }
+}
+
+@media (max-width: 576px) {
+  .navbar-brand {
+    font-size: 1.2rem; /* Зменшуємо розмір тексту логотипу на малих екранах */
+  }
+
+  .navbar-brand img {
+    width: 25px;
+    height: 25px;
+  }
+
+  .nav-link {
+    font-size: 0.9rem; /* Зменшуємо розмір тексту посилань на малих екранах */
+  }
+}

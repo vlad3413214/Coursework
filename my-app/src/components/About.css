@@ -1,0 +1,35 @@
+.container {
+  padding: 40px;
+}
+.about-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.text {
+  flex: 1;
+  margin-right: 20px; /* Доданий відступ між текстом і картинкою */
+}
+.image {
+  flex: 1;
+  text-align: center; /* Вирівнюємо картинку по центру */
+}
+.image_nupp {
+  display: block;
+  margin: 20px auto; /* Центруємо іконку */
+  max-width: 100px; /* Зменшуємо розмір іконки */
+}
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px; /* Опціонально: закруглені кути для картинки */
+}
+@media (max-width: 768px) {
+  .about-section {
+    flex-direction: column;
+  }
+  .text {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+}

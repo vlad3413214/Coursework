@@ -1,0 +1,91 @@
+.news-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: center; /* Центруємо плитки новин по горизонталі */
+  padding: 16px;
+  margin: 0 auto; /* Вирівнюємо по центру сторінку */
+  max-width: 1200px; /* Максимальна ширина контейнера для плиток новин */
+}
+
+.text-center {
+  width: 100%;
+  text-align: center;
+}
+
+.mb-4 {
+  margin-bottom: 16px;
+}
+
+.news-item {
+  width: calc(25% - 16px); /* Зменшуємо ширину плитки новин */
+  background-color: #ffffff; /* Колір фону карточки новини */
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  position: relative; /* Додаємо позиціонування для внутрішніх елементів */
+}
+
+.news-item .background-image {
+  width: 100%;
+  padding-top: 100%; /* Встановлюємо висоту з відповідністю 1:1 */
+  background-size: cover;
+  background-position: center;
+}
+
+.news-item .news-content {
+  background-color: rgba(0, 0, 0, 0.6); /* Прозорий фон для тексту новини */
+  padding: 10px;
+  color: #ffffff; /* Колір тексту */
+  text-align: left; /* Вирівнюємо текст по лівій стороні */
+  transition: background-color 0.3s ease;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.news-item:hover .news-content {
+  background-color: rgba(0, 0, 0, 0.8); /* Змінюємо прозорий фон при наведенні */
+}
+
+.news-item h2 {
+  margin-bottom: 10px;
+  font-size: 1.2rem; /* Зменшуємо розмір заголовку */
+  color: #ffffff; /* Колір заголовка */
+}
+
+.news-item p {
+  margin-bottom: 15px;
+  color: #ffffff; /* Колір тексту новини */
+}
+
+.news-item .read-more {
+  font-size: 0.8rem; /* Зменшуємо розмір посилання 'читати більше' */
+  color: #ffffff;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+@media (max-width: 1024px) {
+  .news-item {
+    width: calc(33.33% - 16px); /* При малих екранах робимо 3 колонки */
+  }
+}
+
+@media (max-width: 768px) {
+  .news-item {
+    width: calc(50% - 16px); /* При ще менших екранах робимо 2 колонки */
+  }
+
+  .news-item .background-image {
+    padding-top: 75%; /* Зменшуємо висоту зображення для малих екранів */
+  }
+
+  .news-item h2 {
+    font-size: 1.1rem; /* Ще більше зменшуємо розмір заголовку */
+  }
+}
